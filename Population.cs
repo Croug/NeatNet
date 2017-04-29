@@ -9,9 +9,18 @@ namespace CalcuProcessing.NeatNet
     {
         public PopulationSettings Parameters;
 
-        public Population(PopulationSettings Parameters)
+        public Population(PopulationSettings parameters)
         {
-            this.Parameters = Parameters;
+            Parameters = parameters;
+        }
+
+        public Population(params PopulationParameter[] settings)
+        {
+            Parameters = new PopulationSettings();
+            foreach(PopulationParameter param in settings)
+            {
+                param.UpdateSettings(Parameters);
+            }
         }
 
         public Population()

@@ -14,6 +14,8 @@ Population:
 	-Population() : Constructor
 	-NextGeneration() : Void
 
+--------
+
 PopulationSettings: 
 	-Size : Int
 	-InputNodes : Int
